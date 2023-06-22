@@ -1,0 +1,6 @@
+.hr-bw {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #FFF, #893a15);
+    opacity: 1;
+}
