@@ -1,0 +1,9 @@
+.position-absolute {
+    position: absolute !important;
+
+    background-color: rgb(181, 181, 201);
+}
+
+.position-relative {
+    height: 60vh;
+}
