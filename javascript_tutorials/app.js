@@ -1,14 +1,10 @@
-alert("Hey there is IPL match in Bengaluru");
+// alert("Hey there is IPL match in Bengaluru");
 
+// const name = prompt('Please enter your name:');
+// console.log('Hello, ' + name); // Logs a message with the entered name
 
-const name = prompt('Please enter your name:');
-console.log('Hello, ' + name); // Logs a message with the entered name
-
-
-const result = confirm('Are you sure you want to learn full stack development?');
-console.log(result)
-
-
+// const result = confirm('Are you sure you want to learn full stack development?');
+// console.log(result)
 
 var age = 23;
 var place = "Bengaluru";
@@ -25,11 +21,8 @@ const student = {
     salary: 30000
 };
 
-
 function order() {
     console.log("This is order")
 }
 
-order();
-
-
+// order();
