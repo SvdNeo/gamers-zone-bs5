@@ -1,19 +1,3 @@
-let gamer = {
-    "name": "Sumanth",
-    "id": 1,
-    "age": 22,
-    "fav_games": ["fortnite", "call of duty", "pubg"]
-}
-
-for (let key_temp in gamer) {
-    console.log(key_temp)
-}
-
-for (let key in gamer) {
-    console.log(gamer[key])
-}
-
-// https://jsonplaceholder.typicode.com/users
 
 let users = [
     {
@@ -247,3 +231,20 @@ let users = [
         }
     }
 ]
+
+
+for (let user of users) {
+    console.log("address details of " + user.name)
+
+    console.log("*********************")
+    for (let temp_address in user.address) {
+        console.log(temp_address + " = " + user.address[temp_address])
+    }
+
+    console.log("*********************")
+}
+
+let str = "The wolrd is round.!";
+for (let chartemp of str) {
+    console.log(chartemp)
+}
