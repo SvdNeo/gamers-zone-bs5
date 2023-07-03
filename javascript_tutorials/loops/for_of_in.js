@@ -248,3 +248,55 @@ let str = "The wolrd is round.!";
 for (let chartemp of str) {
     console.log(chartemp)
 }
+
+let students = [
+
+    {
+        name: "Sumanth",
+        age: 22,
+        marks: [
+            { sub_name: "Maths", marks: 24 },
+            { sub_name: "Eng", marks: 22 },
+            { sub_name: "Kannada", marks: 23 }
+        ]
+    },
+
+
+    {
+        name: "Deepak",
+        age: 22,
+        marks: [
+            { sub_name: "Maths", marks: 24 },
+            { sub_name: "Eng", marks: 22 },
+            { sub_name: "Kannada", marks: 23 }
+        ]
+    },
+    {
+        name: "Mamoj",
+        age: 22,
+        marks: [
+            { sub_name: "Maths", marks: 24 },
+            { sub_name: "Eng", marks: 22 },
+            { sub_name: "Kannada", marks: 23 }
+        ]
+    },
+
+    {
+        name: "Vikash",
+        age: 22,
+        marks: [
+            { sub_name: "Maths", marks: 24 },
+            { sub_name: "Eng", marks: 22 },
+            { sub_name: "Kannada", marks: 23 }
+        ]
+    },
+    {
+        name: "Rakshit",
+        age: 22,
+        marks: [
+            { sub_name: "Maths", marks: 24 },
+            { sub_name: "Eng", marks: 22 },
+            { sub_name: "Kannada", marks: 23 }
+        ]
+    },
+]
