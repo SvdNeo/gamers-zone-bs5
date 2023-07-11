@@ -1,5 +1,5 @@
-let fruits = ['banana', 'apple', 'orange'];
-let slicedArray = fruits.slice(1, 3);
+let fruits = ['banana', 'apple', 'orange', 'banana'];
+let slicedArray = fruits.slice(0, 0);
 console.log(slicedArray); // Output: ['apple', 'orange']
 
 let concatenatedArray = fruits.concat(['grape', 'kiwi']);
@@ -14,7 +14,8 @@ console.log(reversedArray); // Output: ['orange', 'banana', 'apple']
 let joinedString = fruits.join(', ');
 console.log(joinedString); // Output: 'orange, banana, apple'
 
-let foundFruit = fruits.find((fruit) => fruit === 'banana');
+let cbFind = fruit => fruit === 'banana';
+let foundFruit = fruits.find(cbFind);
 console.log(foundFruit); // Output: 'banana'
 
 let index = fruits.findIndex((fruit) => fruit === 'orange');

@@ -20,7 +20,7 @@ let cb = (accumulator, number) => {
 let sum = numbers.reduce(cb);
 console.log(sum); // Output: 15
 
-let cb2 = (num) => num % 2 === 0;
+let cb2 = num => num % 2 === 0;
 // Using find to get the first even number
 let firstEvenNumber = numbers.find(cb2);
 console.log(firstEvenNumber); // Output: 2
