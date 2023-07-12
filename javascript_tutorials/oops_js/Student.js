@@ -2,14 +2,15 @@
 const Person = require('./Person');
 
 class Student extends Person {
-    constructor(name, age, school) {
+    constructor(name, age, university) {
         super(name, age);
-        this.school = school;
+        this.university = university;
     }
 
     study() {
-        console.log(this.name + ' is studying at ' + this.school + '.');
+        console.log(this.name + ' is studying at ' + this.university + '.');
     }
 }
+
 
 module.exports = Student;
