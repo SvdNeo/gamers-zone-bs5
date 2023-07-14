@@ -37,7 +37,7 @@ main {
 }
 
 .form-floating label.select-label {
-    color: #999;
+    color: #777;
     font-size: 12px;
 
 }
@@ -45,4 +45,13 @@ main {
 .form-floating label.select-label::after {
     background-color: transparent;
 
+}
+
+.general__container {
+    background: #292929;
+    color: white;
+}
+
+.general__container strong {
+    color: #777;
 }
