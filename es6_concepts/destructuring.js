@@ -21,4 +21,4 @@ console.log(gender_1); // female
 
 
 // Array destructuring
-const [first, second] = ["One", "Two"]
+const [first, ...second] = ["One", "Two"]
