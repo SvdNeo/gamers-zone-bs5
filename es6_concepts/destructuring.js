@@ -18,3 +18,7 @@ let { name: name_1, age: age_1, gender: gender_1 } = person;
 console.log(name_1); // Riya
 console.log(age_1); // 22
 console.log(gender_1); // female
+
+
+// Array destructuring
+const [first, second] = ["One", "Two"]
