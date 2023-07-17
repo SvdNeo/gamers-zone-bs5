@@ -1,0 +1,1 @@
+Array.from("ABCDEFG")   // Returns [A,B,C,D,E,F,G]
