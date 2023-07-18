@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gamers Zone</title>
+    <style>
+        .game-card {
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Gamers Zone</h1>
+
+    <div class="game-card">
+        <h2>Game 1</h2>
+        <p>This is the first game description.</p>
+    </div>
+
+    <div class="game-card">
+        <h2>Game 2</h2>
+        <p>This is the second game description.</p>
+    </div>
+
+    <div class="game-card">
+        <h2>Game 3</h2>
+        <p>This is the third game description.</p>
+    </div>
+
+    <script>
+        // Accessing the element with the CSS selector ".game-card"
+        var gameCardElement = document.querySelector(".game-card");
+
+        // Modifying the content of the selected element
+        gameCardElement.innerHTML += "<p>New content added dynamically!</p>";
+
+        // Modifying the style of the selected element
+        gameCardElement.style.border = "2px solid fuchsia";
+    </script>
+</body>
+
+</html>
