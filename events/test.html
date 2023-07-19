@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gamers Zone - Focus Events</title>
+    <style>
+        /* Add your CSS styles here */
+        .game-card {
+            width: 200px;
+            height: 300px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .game-card:focus {
+            outline: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-card" id="game1" tabindex="0">
+        <h3>Game 1</h3>
+        <p>Description of Game 1</p>
+    </div>
+
+    <div class="game-card" id="game2" tabindex="0">
+        <h3>Game 2</h3>
+        <p>Description of Game 2</p>
+    </div>
+
+    <div class="game-card" id="game3" tabindex="0">
+        <h3>Game 3</h3>
+        <p>Description of Game 3</p>
+    </div>
+
+    <script>
+        // JavaScript code for the focus events
+        const gameCards = document.querySelectorAll('.game-card');
+
+        gameCards.forEach(function (card) {
+            card.addEventListener('focus', function (event) {
+                console.log('Focus on', this.id);
+            });
+
+            card.addEventListener('blur', function (event) {
+                console.log('Blur on', this.id);
+            });
+        });
+    </script>
+</body>
+
+</html>
