@@ -1,0 +1,31 @@
+   /* Add CSS styles here */
+   body {
+       padding: 10px;
+       margin: 10px;
+   }
+
+   * {
+       margin: 2px;
+   }
+
+   .context-menu {
+       position: absolute;
+       background-color: #f0f0f0;
+       border: 1px solid #ccc;
+       padding: 5px;
+       display: none;
+   }
+
+   .game-card {
+       flex: auto;
+       height: 300px;
+       background-color: #f0f0f0;
+       border: 1px solid #ccc;
+       padding: 10px;
+       margin: 10px;
+
+   }
+
+   .game-card:hover {
+       background-color: #e0e0e0;
+   }
