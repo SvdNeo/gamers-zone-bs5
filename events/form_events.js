@@ -4,10 +4,7 @@ const addCardForm = document.getElementById('addCardForm');
 addCardForm.addEventListener('submit', function (event) {
     event.preventDefault();
     console.log('Form submitted');
-
-
 });
-
 
 const titleInput = document.getElementById('titleInput');
 const descriptionInput = document.getElementById('descriptionInput');
