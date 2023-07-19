@@ -15,8 +15,8 @@ window.addEventListener('unload', function () {
     console.log('Page unloaded');
 });
 
-window.addEventListener('orientationchange', function () {
-    console.log('Device orientation changed');
+window.addEventListener('orientationchange', function (event) {
+    console.log('Device orientation changed', event);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
