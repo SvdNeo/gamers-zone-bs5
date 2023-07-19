@@ -1,35 +1,35 @@
-// const gameThumbnail = document.getElementById('gameThumbnail_img');
+const gameThumbnail = document.getElementById('gameThumbnail_img');
 
-// gameThumbnail.addEventListener('click', function () {
-//     // Open game details or perform an action
-//     console.log('Game thumbnail clicked!');
-//     gameThumbnail.src = "./player_icon.jpg"
-// });
-
-
-// const gameCard1 = document.getElementById('gameCard');
-
-// gameCard1.addEventListener('mouseover', function () {
-//     // Change background color or apply hover effect
-//     gameCard1.style.backgroundColor = 'lightblue';
-// });
-
-// const gameCard2 = document.getElementById('gameCard');
-
-// gameCard2.addEventListener('mouseout', function () {
-//     // Restore original background color or remove hover effect
-//     gameCard2.style.backgroundColor = '';
-// });
+gameThumbnail.addEventListener('click', function () {
+    // Open game details or perform an action
+    console.log('Game thumbnail clicked!');
+    gameThumbnail.src = "./player_icon.jpg"
+});
 
 
-// const draggableElement = document.getElementById('draggableElement');
+const gameCard1 = document.getElementById('gameCard');
 
-// draggableElement.addEventListener('mousedown', function () {
-//     // Perform actions for drag and drop
-//     console.log('Mouse button pressed on draggable element');
-// });
+gameCard1.addEventListener('mouseover', function () {
+    // Change background color or apply hover effect
+    gameCard1.style.backgroundColor = 'lightblue';
+});
 
-// // JavaScript code for the context menu logic
+const gameCard2 = document.getElementById('gameCard');
+
+gameCard2.addEventListener('mouseout', function () {
+    // Restore original background color or remove hover effect
+    gameCard2.style.backgroundColor = '';
+});
+
+
+const draggableElement = document.getElementById('draggableElement');
+
+draggableElement.addEventListener('mousedown', function () {
+    // Perform actions for drag and drop
+    console.log('Mouse button pressed on draggable element');
+});
+
+// JavaScript code for the context menu logic
 const gameElement = document.getElementById('gameElement');
 const contextMenu = document.getElementById('contextMenu');
 
