@@ -36,9 +36,9 @@ function handleClick(event) {
 
     if (clickedElement.classList.contains('game-card')) {
         const gameId = clickedElement.id;
-        console.log(`Game card with ID ${gameId} clicked`);
-
+        console.log(`Game card with ID ${gameId} before displayGameData`);
         displayGameData(gameId);
+        console.log(`Game card with ID ${gameId} after displayGameData`);
     }
 
 }
