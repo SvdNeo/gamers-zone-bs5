@@ -26,4 +26,6 @@ Problems on Array
 
 [https://leetcode.com/problems/n-repeated-element-in-size-2n-array/](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/) -
 
-<https://leetcode.com/problems/asteroid-collision/> -
+[https://leetcode.com/problems/asteroid-collision/](https://leetcode.com/problems/asteroid-collision/) -
+
+<https://leetcode.com/problems/move-zeroes/> - 21
