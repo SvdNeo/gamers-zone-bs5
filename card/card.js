@@ -8,20 +8,25 @@ let games = [{
 
 }]
 for (let game of games) {
-    let content = `<div class="card">
-                        <div class="card-body">
-                            <div>
-                                <span class="card-title">${game.title}</span>
-                                <span class="material-symbols-outlined cust_float_right">
-                                    more_vert
-                                </span>
-                            </div>
 
-                            <p class="card-text">${game.desc}</p>
-                        </div>
-                    </div>`;
     newGameCard = document.createElement('div');
     newGameCard.className = 'col-lg-4 col-md-6';
-    newGameCard.innerHTML = content;
+    newGameCard.innerHTML = getTheContent(game);
     document.getElementById('first_row').appendChild(newGameCard);
+}
+
+function getTheContent(game) {
+    let content = `<div class="card">
+            <div class="card-body">
+                <div>
+                    <span class="card-title">${game.title}</span>
+                    <span class="material-symbols-outlined cust_float_right">
+                        more_vert
+                    </span>
+                </div>
+
+                <p class="card-text">${game.desc}</p>
+            </div>
+        </div>`;
+    return content;
 }
