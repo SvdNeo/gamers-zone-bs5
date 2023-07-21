@@ -2,10 +2,13 @@
 
 const form = document.getElementById('registrationForm');
 
-form.addEventListener('submit', function (event) {
+let formCB = function (event) {
     event.preventDefault();
     validateForm();
-});
+}
+
+form.addEventListener('submit', formCB);
+
 
 function validateForm() {
     const usernameInput = document.getElementById('username');
@@ -57,7 +60,7 @@ function validateForm() {
     // Submit form if all fields are valid
     if (isValid) {
         setTimeout(() =>
-            form.submit(), 1000)
+            form.submit(), 2000)
     }
 }
 

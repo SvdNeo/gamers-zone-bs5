@@ -56,7 +56,11 @@ function validateForm() {
 
     // Submit form if all fields are valid
     if (isValid) {
-        // You can add your form submission logic here
+        // Submit form if all fields are valid
+        if (isValid) {
+            setTimeout(() =>
+                form.submit(), 2000)
+        }
         console.log('Form submitted successfully.');
     }
 }
