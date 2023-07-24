@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include jQuery UI CSS for Datepicker styles -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+        <section>
+
+
+            <div id="welcome-message">Welcome to Gamers Zone!</div>
+
+            <div><button id="play-button">Play Now</button></div>
+
+            <div id="character" style="width: 100px; height: 100px; background-color: red;"></div>
+
+        </section>
+        <section>
+
+            <div id="leaderboard"></div>
+
+            <div>
+                <ul id="games-list">
+                    <li class="game">Game 1</li>
+                    <li class="game">Game 2</li>
+                    <li class="game">Game 3</li>
+                </ul>
+            </div>
+            <div>
+                <!-- Datepicker input -->
+                <label for="datepicker">Select a Date:</label>
+                <input type="text" id="datepicker">
+            </div>
+
+            <div id="slider"></div>
+
+
+        </section>
+
+        <section>
+            <div>
+                <button id="change-color-btn">Change Color</button>
+                <div class="changeable-element">This element can change color!</div>
+            </div>
+
+            <div>
+                <button id="load-data-btn">Load Data</button>
+                <div id="data-container"></div>
+            </div>
+            <div>
+                <ul id="task-list">
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+                <button id="add-task-btn">Add Task</button>
+            </div>
+            <div>
+                <button id="show-message-btn">Show Message</button>
+            </div>
+
+            <div>
+                <button class="toggle-menu">Toggle Menu</button>
+                <ul class="nav-menu">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+
+            </div>
+            <div>
+                <form id="registration-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <br>
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                    <br>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+            <div>
+                <div id="content-container">
+                    <p>Click the button to load a Chuck Norris joke:</p>
+                </div>
+                <button id="load-content-btn">Load Joke</button>
+            </div>
+        </section>
+    </main>
+    <script src="basic_jquery.js"></script>
+</body>
+
+</html>
