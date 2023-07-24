@@ -1,20 +1,20 @@
-let games = [{
-    title: "World of Tanks",
-    id: 1,
-    desc: "World of Tanks is an armoured warfare-themed multiplayer online game developed by Wargaming, featuring 20th century era combat vehicles. It is built upon a freemium business model where the game is free-to-play, but participants also have the option of paying a fee for use of \"premium\" features."
-},
-{
-    title: "War Thunder",
-    id: 2,
-    desc: "War Thunder is a free-to-play vehicular combat multiplayer video game developed and published by Gaijin Entertainment. Announced in 2011, it was first released in November 2012 as an open beta with a worldwide release in January 2013; it had its official release on 21 December 2016. "
+// let games = [{
+//     title: "World of Tanks",
+//     id: 1,
+//     desc: "World of Tanks is an armoured warfare-themed multiplayer online game developed by Wargaming, featuring 20th century era combat vehicles. It is built upon a freemium business model where the game is free-to-play, but participants also have the option of paying a fee for use of \"premium\" features."
+// },
+// {
+//     title: "War Thunder",
+//     id: 2,
+//     desc: "War Thunder is a free-to-play vehicular combat multiplayer video game developed and published by Gaijin Entertainment. Announced in 2011, it was first released in November 2012 as an open beta with a worldwide release in January 2013; it had its official release on 21 December 2016. "
 
-}]
+// }]
 
-// let games = []
+let games = []
 let nextId = 3;
 let currentEditGame = {};
 function getTheContent(game) {
-    let content = `<div class="card">
+    let content = `<div class="card" id="${game.id}">
             <div class="card-body">
                 <div>
                     <span class="card-title">${game.title}</span>
@@ -69,8 +69,8 @@ function addGame() {
     document.getElementById('first_row').appendChild(newGameCard);
 
     myModal.hide();
-    document.getElementById("game_name").value = "";
-    document.getElementById("game_description").value = "";
+    // document.getElementById("game_name").value = "";
+    // document.getElementById("game_description").value = "";
 
 
 }
