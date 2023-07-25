@@ -3,33 +3,39 @@ $(document).ready(function () {
     $("#welcome-message").text("Hello, fellow gamers!"); // Modifying content
     $("#welcome-message").addClass("highlight"); // Adding a CSS class dynamically
 
-    // jQuery Event Handling
-    $("#play-button").on("click", function () {
+    const cb1 = function () {
         alert("Game starting!"); // Show an alert when the "Play Now" button is clicked
-    });
+    }
+    // jQuery Event Handling
+    $("#play-button").on("click", cb1);
 
-    // Effects and Animations:
-    $("#character").animate({ // Animating the character's size and color on page load
+    const aniSetting1 = { // Animating the character's size and color on page load
         width: "200px",
         height: "200px",
         backgroundColor: "blue"
-    }, 1000); // Animation duration: 1 second
+    }
+    // Effects and Animations:
+    $("#character").animate(aniSetting1, 1000); // Animation duration: 1 second
 
     // https://jsonplaceholder.typicode.com/todos/1'
 
+    const ajaxSuccessCB1 = (data) => {
+        $("#leaderboard").html(`<p>Leaderboard: ${data.title}</p>`); // Display leaderboard data from the API
+    }
+    const ajaxErrorCB1 = () => {
+        $("#leaderboard").html("Failed to load leaderboard data.");
+    }
+
+    const ajaxApiConfig = {
+        url: "https://jsonplaceholder.typicode.com/todos/2", // Sample API endpoint
+        success: ajaxSuccessCB1,
+        error: ajaxErrorCB1
+    }
     // jQuery AJAX
-    $.ajax({
-        url: "https://jsonplaceholder.typicode.com/todos/1", // Sample API endpoint
-        success: function (data) {
-            $("#leaderboard").html("Leaderboard: " + data.title); // Display leaderboard data from the API
-        },
-        error: function () {
-            $("#leaderboard").html("Failed to load leaderboard data.");
-        }
-    });
+    $.ajax(ajaxApiConfig);
 
     // DOM Traversal:
-    var firstGame = $("#games-list li:first-child").text(); // Get the text of the first game in the list
+    var firstGame = $("#games-list li:first-child").html(); // Get the text of the first game in the list
     console.log(firstGame); // Output: "Game 1"
 
     // jQuery UI Slider
@@ -44,10 +50,11 @@ $(document).ready(function () {
 
     // jQuery UI Datepicker Initialization
     $("#datepicker").datepicker();
+
     $("#change-color-btn").click(function () {
         // Call the colorChanger plugin on the .changeable-element
         $(".changeable-element").colorChanger({
-            color: "green", // Change to green
+            color: "blue", // Change to blue
             duration: 2000 // Animation duration: 2 seconds
         });
     });
@@ -59,6 +66,7 @@ $(document).ready(function () {
 
         // Simulate an AJAX call to fetch data from the server (using setTimeout)
         setTimeout(function () {
+            // deferred.reject({ errorMsg: "Please retry after 30 seconds" });
             var data = "Data loaded from the server!"; // Simulated server response
             deferred.resolve(data); // Resolve the Deferred with the data
         }, 2000); // Simulate a 2-second delay
@@ -66,17 +74,24 @@ $(document).ready(function () {
         // Return the Promise object associated with the Deferred
         return deferred.promise();
     }
+    const promiseSuccessCB1 = function (data) {
+        // Display the loaded data in the data-container element
+        $("#data-container").text(data);
+    }
+
+
+    const promiseErrorCB1 = function (data) {
+        console.log(`error ${data.errorMsg}`)
+    }
 
     $("#load-data-btn").click(function () {
         $("#load-data-btn").prop("disabled", true); // Disable the button during data loading
 
         // Call the function to load data from the server and handle the Promise
-        loadDataFromServer().then(function (data) {
-            // Display the loaded data in the data-container element
-            $("#data-container").text(data);
-        }).always(function () {
-            $("#load-data-btn").prop("disabled", false); // Re-enable the button after data loading is complete
-        });
+        loadDataFromServer().then(promiseSuccessCB1, promiseErrorCB1)
+            .always(function () {
+                $("#load-data-btn").prop("disabled", false); // Re-enable the button after data loading is complete
+            });
     });
 
     // Event delegation setup
