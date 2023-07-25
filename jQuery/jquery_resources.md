@@ -6,4 +6,6 @@
 
 [https://www.w3schools.com/jquery/default.asp](https://www.w3schools.com/jquery/default.asp)
 
-<https://www.upgrad.com/blog/jquery-project-ideas-beginners/>
+[https://www.upgrad.com/blog/jquery-project-ideas-beginners/](https://www.upgrad.com/blog/jquery-project-ideas-beginners/)
+
+<https://api.jquery.com/>
