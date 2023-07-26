@@ -1,0 +1,14 @@
+{
+    "name": "Harish Singh",
+    "age": 30,
+    "isMarried": false,
+    "hobbies": [
+        "reading",
+        "swimming",
+        "cooking"
+    ],
+    "address": {
+        "city": "Patiala",
+        "zipCode": "147001"
+    }
+}
