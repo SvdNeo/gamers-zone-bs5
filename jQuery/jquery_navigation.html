@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Navigation</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include jQuery UI CSS for Datepicker styles -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="jquery_navigation.css">
+</head>
+
+<main>
+    <!-- Simple Show/Hide Navigation: -->
+    <!-- <nav>
+        <ul class="main-menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services
+                <ul class="sub-menu">
+                    <li>Service 1</li>
+                    <li>Service 2</li>
+                    <li>Service 3</li>
+                </ul>
+            </li>
+            <li>Contact</li>
+        </ul>
+    </nav> -->
+
+    <!-- Responsive Mobile Menu: -->
+    <!-- <nav>
+        <div class="mobile-menu-toggle">Menu</div>
+        <ul class="main-menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav> -->
+
+    <!-- Smooth Scroll Navigation: -->
+    <!-- <nav>
+        <ul class="main-menu">
+            <li><a href="#section-home">Home</a></li>
+            <li><a href="#section-about">About</a></li>
+            <li><a href="#section-services">Services</a></li>
+            <li><a href="#section-contact">Contact</a></li>
+        </ul>
+    </nav> -->
+
+    <!-- Toggle Button for Small Screens -->
+    <!-- <button class="toggle-menu">Toggle Menu</button> -->
+
+    <!-- Navigation Menu -->
+    <!-- <ul class="nav-menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul> -->
+
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu">
+        <li data-scroll-to="#section-home">Home</li>
+        <li data-scroll-to="#section-about">About</li>
+        <li data-scroll-to="#section-services">Services</li>
+        <li data-scroll-to="#section-contact">Contact</li>
+    </ul>
+    <main>
+        <!-- Sections -->
+        <section id="section-home">
+            <h2>Home Section</h2>
+            <p>Welcome to our website!</p>
+        </section>
+        <section id="section-about">
+            <h2>About Section</h2>
+            <p>Learn about our company.</p>
+        </section>
+        <section id="section-services">
+            <h2>Services Section</h2>
+            <p>Explore our services.</p>
+        </section>
+        <section id="section-contact">
+            <h2>Contact Section</h2>
+            <p>Contact us for inquiries.</p>
+        </section>
+    </main>
+
+    <!-- <main>
+        <section id="section-home">
+            <h2>Home Section</h2>
+             Content for home section 
+    </section>
+
+    <section id="section-about">
+        <h2>About Section</h2>
+        Content for about section
+    </section>
+
+    <section id="section-services">
+        <h2>Services Section</h2>
+        Content for services section
+    </section>
+
+    <section id="section-contact">
+        <h2>Contact Section</h2>
+        Content for contact section
+    </section>
+
+    </main>-->
+    <script src="jquery_navigation.js"></script>
+    </body>
+
+</html>
