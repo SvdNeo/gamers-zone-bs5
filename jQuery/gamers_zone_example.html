@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>Advanced Gamers Zone</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav-menu">
+            <li class="active">Home</li>
+            <li>Games</li>
+            <li>Leaderboard</li>
+            <li>Chat</li>
+            <li class="auth">Login / Register</li>
+            <li class="auth hidden">Logout</li>
+        </ul>
+    </nav>
+
+    <!-- Content Container -->
+    <div id="content-container">
+        <!-- Main Content will be loaded here -->
+    </div>
+
+    <!-- Login and Register Dialogs -->
+    <div id="login-dialog" title="Login">
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </form>
+    </div>
+
+    <div id="register-dialog" title="Register">
+        <form>
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="new-username">
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="new-password">
+        </form>
+    </div>
+
+    <!-- Chat Box -->
+    <div id="chat-box" class="hidden">
+        <div id="chat-messages"></div>
+        <form id="chat-form">
+            <input type="text" id="chat-input" autocomplete="off" placeholder="Type your message...">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Navigation Menu
+            $(".nav-menu li").click(function () {
+                $(".nav-menu li").removeClass("active");
+                $(this).addClass("active");
+
+                const content = $(this).text().toLowerCase();
+                loadContent(content);
+            });
+
+            // Login and Register Dialogs
+            $("#login-dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Login": function () {
+                        // Handle login form submission
+                        // Send credentials to the server for authentication
+                        // For simplicity, assume login is successful
+                        $(this).dialog("close");
+                        toggleAuthentication(true);
+                    }
+                }
+            });
+
+            $("#register-dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Register": function () {
+                        // Handle registration form submission
+                        // Send registration data to the server for processing
+                        // For simplicity, assume registration is successful
+                        $(this).dialog("close");
+                        toggleAuthentication(true);
+                    }
+                }
+            });
+
+            $(".auth").click(function () {
+                if ($(this).text() === "Login / Register") {
+                    $("#login-dialog").dialog("open");
+                } else {
+                    // Perform logout operation
+                    // For simplicity, assume logout is successful
+                    toggleAuthentication(false);
+                }
+            });
+
+            // Chat Box
+            const $chatBox = $("#chat-box");
+            $("#chat-form").submit(function (event) {
+                event.preventDefault();
+                const message = $("#chat-input").val().trim();
+                if (message !== "") {
+                    displayChatMessage(message);
+                    $("#chat-input").val("");
+                }
+            });
+
+            function displayChatMessage(message) {
+                $("#chat-messages").append("<p>" + message + "</p>");
+            }
+
+            // Function to load content dynamically
+            function loadContent(content) {
+                $("#content-container").load(content + ".html");
+            }
+
+            // Function to toggle authentication buttons
+            function toggleAuthentication(isAuthenticated) {
+                if (isAuthenticated) {
+                    $(".auth").toggleClass("hidden");
+                } else {
+                    $(".auth").toggleClass("hidden");
+                    $(".nav-menu li").removeClass("active");
+                    loadContent("home");
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

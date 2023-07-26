@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Navigation</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include jQuery UI CSS for Datepicker styles -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="user_authentication.css">
+</head>
+
+<main>
+    <!-- Login Dialog -->
+    <div id="login-dialog" title="Login">
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </form>
+    </div>
+
+    <!-- Register Dialog -->
+    <div id="register-dialog" title="Register">
+        <form>
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="new-username">
+            <!-- Other registration fields -->
+        </form>
+    </div>
+</main>
+<script src="user_authentication.js"></script>
+</body>
+
+</html>
