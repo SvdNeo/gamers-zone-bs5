@@ -5,5 +5,12 @@ function power(base, exponent) {
         return base * power(base, exponent - 1);
     }
 }
+let result = power(2, 5)
+console.log(result); // Output: 32 (2^5)
 
-console.log(power(2, 5)); // Output: 32 (2^5)
+// Call stack 32
+//2 * 16
+//2 * 8
+//2 * 4
+//2 * 2
+//2 * 1
