@@ -33,3 +33,5 @@ https://leetcode.com/problems/peak-index-in-a-mountain-array/ - 26/07/23
 https://leetcode.com/problems/running-sum-of-1d-array/ - 26/07/23
 
 https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/ - 26/07/23
+
+https://leetcode.com/problems/power-of-four/ 28/07/23
