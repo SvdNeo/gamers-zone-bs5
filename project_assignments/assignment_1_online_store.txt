@@ -1,0 +1,50 @@
+Project
+
+
+
+Assignment Title: Online Store with Local Storage Authentication and Order Management using Bootstrap 5
+
+Objective:
+Build a simple online store application that allows users to sign up, log in, view and 
+purchase items from a local array of product objects, manage their favorite items, and create tickets for order issues.
+
+Technologies:
+* HTML
+* CSS (Bootstrap 5)
+* JavaScript (jQuery)
+* Local Storage
+* JSON
+
+Assignment Tasks:
+
+* User Authentication:
+    * Create a sign-up page with fields for username and password.
+    * Implement user registration and store user information (username and password) in local storage.
+    * Create a login page with fields for username and password.
+    * Implement login functionality, validate credentials against stored user data in local storage, and allow users to access the main application upon successful login.
+
+* Displaying Items:
+    * Create a local array of product objects containing a list of items available for purchase in your online store.
+    * Design and implement a page that displays all the items from the local array of product objects using Bootstrap 5 cards.
+    * Each card should include details such as name, description, price, image_url and an "Add to Cart" button.
+
+* Adding Favorites:
+    * Allow logged-in users to mark items as favorites.
+    * Implement a feature that lets users view their list of favorite items.
+    * Store the list of favorite items in local storage, associating the data with the logged-in user.
+
+* Orders Management:
+    * Create a tab-based interface to manage orders: "Pending Orders," "Completed Orders," and "Cancelled Orders."
+    * Implement functionality to move orders between tabs based on their status.
+    * For simplicity, you can use a simple "Order" object with properties like order ID, date, items purchased, and status (pending, completed, cancelled).
+
+* Create Ticket for Order Issue:
+    * In the "Pending Orders" tab, provide an option to create a ticket for any order with an issue.
+    * Implement a form where users can describe the issue with their order.
+    * Upon submission, store the ticket information (order ID, description, date, etc.) in local storage, associating it with the logged-in user.
+
+Bonus Tasks (Optional):
+* Add a shopping cart feature where users can add items from the store before checking out.
+* Implement a search functionality to allow users to search for specific items.
+* Improve the design and user interface of the application using additional Bootstrap components.
+
