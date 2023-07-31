@@ -1,7 +1,3 @@
-Project
-
-
-
 Assignment Title: Online Store with Local Storage Authentication and Order Management using Bootstrap 5
 
 Objective:
