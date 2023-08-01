@@ -14,7 +14,7 @@ function myFunction() {
 }
 
 // myFunction(); // Refers to the global object (window in browsers, undefined in strict mode)
-// console.log("---------")
+console.log("---------")
 
 // b.Method Invocation:
 // When a function is called as a method of an object, "this" will refer to the object itself.
@@ -40,19 +40,30 @@ function outerFunction() {
 }
 
 // outerFunction();
+
+let obj30 = {
+    test: function outerFunction() {
+        console.log(this); // Refers to the global object (window in browsers, undefined in strict mode)
+        function innerFunction() {
+            console.log(this); // Refers to the global object (window in browsers, undefined in strict mode)
+        }
+        innerFunction();
+    }
+}
+// obj30.test();
 // console.log("---------")
 // Arrow functions:
 // Arrow functions behave differently regarding "this" compared to regular functions.
 // They inherit the value of "this" from the surrounding scope, just like any other variable.
-const obj2 = {
-    prop: 'Hello',
-    sayHello: function () {
-        const innerArrow = () => {
-            console.log(this.prop);
-        };
-        innerArrow();
-    }
-};
+// const obj2 = {
+//     prop: 'Hello Manoj',
+//     sayHello: function () {
+//         const innerArrow = function () {
+//             console.log(this.prop);
+//         };
+//         innerArrow();
+//     }
+// };
 
 // obj2.sayHello(); // Refers to the object "obj" and logs "Hello"
 // console.log("---------")
