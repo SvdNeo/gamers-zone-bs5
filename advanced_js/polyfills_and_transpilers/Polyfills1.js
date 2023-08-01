@@ -28,9 +28,10 @@ if (!ArrayAlike.prototype.includes) {
     };
 }
 
-
 let arrAlike = new ArrayAlike()
 arrAlike.addItem(20)
 arrAlike.addItem(30)
-arrAlike.addItem(40)
-console.log(arrAlike.includes(30))
+arrAlike.addItem(40) // 20,30,40
+console.log(arrAlike.includes(30, 1)) // true
+console.log(arrAlike.includes(20, 2)) // false
+console.log(arrAlike.includes(30)) // true
