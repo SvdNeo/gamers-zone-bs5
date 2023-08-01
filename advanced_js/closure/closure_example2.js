@@ -18,3 +18,7 @@ counter(); // Logs: 1
 counter(); // Logs: 2
 counter(); // Logs: 3
 // The `count` variable is not directly accessible from outside, but it's accessible via the closure returned by `createCounter`.
+
+const counter2 = createCounter();
+counter2();  // Logs: 1
+counter2(); //  Logs: 2

@@ -8,5 +8,6 @@ function outerFunction() {
     return innerFunction;
 }
 
+
 const closureFunction = outerFunction();
 closureFunction(); // This will log: "I am from the outer function"

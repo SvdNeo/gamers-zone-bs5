@@ -8,6 +8,8 @@ function setupButton() {
     button.addEventListener('click', function () {
         count++;
         console.log('Button clicked ' + count + ' times.');
+        document.getElementById("result").innerHTML = count;
+
     });
 }
 
