@@ -19,7 +19,7 @@ if (!ArrayAlike.prototype.includes) {
 
         while (k < len) {
             var currentElement = O[k];
-            if (searchElement === currentElement || (searchElement !== searchElement && currentElement !== currentElement))
+            if (searchElement === currentElement)
                 return true;
             k++;
         }
@@ -27,7 +27,6 @@ if (!ArrayAlike.prototype.includes) {
         return false;
     };
 }
-
 let arrAlike = new ArrayAlike()
 arrAlike.addItem(20)
 arrAlike.addItem(30)
