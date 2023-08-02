@@ -25,13 +25,17 @@ function counter() {
 }
 
 
-let increment = counter();
-let increment2 = counter();
-increment()
-increment()
-increment()
-increment()
+let increment1 = counter(); // run = 0
+let increment2 = counter(); // run = 0
+let increment3 = counter(); // run = 0
+let increment4 = counter(); // run = 0
+let increment5 = counter(); // run = 0
+increment1()
 increment2()
+increment3()
+increment4()
+increment2()
+increment5()
 
 // Example Ecommerce cart
 
