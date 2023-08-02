@@ -1,0 +1,9 @@
+Assignment Description
+You are tasked with building a social media app using Object-Oriented Programming (OOP) concepts in JavaScript. 
+Your app should allow users to create profiles, connect with friends, share content, and interact with other users. 
+You should use the following OOP concepts in your implementation: inheritance, encapsulation, polymorphism, and abstraction.
+
+1 user -> n posts -> (who)
+1 post -> n comments (who)
+1 comment -> n replies (who)
+
