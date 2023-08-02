@@ -9,7 +9,7 @@ function getMyBranch() {
 }
 
 
-getMyBranch() // TypeError
+getMyBranch() // TypeError -> Uncaught TypeError: getMyBranch is not a function
 var getMyBranch = function () {
 
     var branch = "Computer Engineering"
@@ -17,7 +17,7 @@ var getMyBranch = function () {
 }
 
 
-getMyBranch() // ReferenceError 
+getMyBranch() // ReferenceError -> Uncaught ReferenceError: getMyBranch is not defined
 let getMyBranch = function () {
 
     var branch = "Computer Engineering"
@@ -26,5 +26,9 @@ let getMyBranch = function () {
 let test;
 console.log(test)
 
-console.log(favPlayer)
+
+const playerCountry;
+console.log(playerCountry) // Uncaught SyntaxError: Missing initializer in const declaration
+
+console.log(favPlayer) // Uncaught ReferenceError: favPlayer is not defined
 const favPlayer = "M S D";
