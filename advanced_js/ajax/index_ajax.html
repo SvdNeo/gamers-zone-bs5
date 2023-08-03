@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ajax Example</title>
+</head>
+
+<body>
+    <div id="output"></div>
+
+    <script>
+        // Function to make an Ajax request
+        function fetchData() {
+            fetch('https://pokeapi.co/api/v2/ability/?limit=20&offset=20')
+                .then(response => response.json()) // Parse the JSON data
+                .then(data => {
+                    // Process the data
+                    displayData(data.results);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        // Function to display the fetched data
+        function displayData(data) {
+            // Assuming the data is an array of objects
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+
+            data.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.textContent = `Name: ${item.name}`;
+                outputDiv.appendChild(itemDiv);
+            });
+        }
+
+        // Trigger the Ajax request when the page loads
+        window.onload = fetchData;
+    </script>
+</body>
+
+</html>
