@@ -27,7 +27,7 @@ let test;
 console.log(test)
 
 
-const playerCountry;
+// const playerCountry;
 console.log(playerCountry) // Uncaught SyntaxError: Missing initializer in const declaration
 
 console.log(favPlayer) // Uncaught ReferenceError: favPlayer is not defined
