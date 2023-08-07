@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-axios.get('http://localhost:4000/api/books')
+axios.get('https://jsonplaceholder.typicode.com/users/1')
     .then((response) => {
         console.log(response.data);
     })
@@ -19,3 +19,4 @@ axios.get('http://localhost:4000/api/books')
         }
         console.log(error.config);
     });
+
