@@ -3,7 +3,7 @@ var XMLHttpRequest = require('xhr2');
 var xhr = new XMLHttpRequest();
 console.log(xhr)
 // Configure the request
-xhr.open('GET', 'http://localhost:4000/api/books', true);
+xhr.open('GET', 'https://pokeapi.co/api/v2/ability/?limit=20&offset=20', true);
 let i = 0;
 // Set a callback function to handle the response
 xhr.onreadystatechange = function () {
