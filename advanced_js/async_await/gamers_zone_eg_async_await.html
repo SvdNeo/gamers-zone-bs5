@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gamers Zone</title>
+</head>
+
+<body>
+    <div id="leaderboard"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            // Mock APIs
+            async function fetchScores() {
+                return new Promise(function (resolve) {
+                    setTimeout(function () {
+                        const scores = [100, 200, 150, 300, 250];
+                        resolve(scores);
+                    }, 1000);
+                });
+            }
+
+            async function fetchAchievements() {
+                return new Promise(function (resolve) {
+                    setTimeout(function () {
+                        const achievements = ["Bronze", "Silver", "Gold"];
+                        resolve(achievements);
+                    }, 800);
+                });
+            }
+
+            async function fetchPlayers() {
+                return new Promise(function (resolve) {
+                    setTimeout(function () {
+                        const players = ["Player A", "Player B", "Player C"];
+                        resolve(players);
+                    }, 1200);
+                });
+            }
+
+            // Fetch and display the leaderboard using async/await
+            try {
+                const scores = await fetchScores();
+                const achievements = await fetchAchievements();
+                const players = await fetchPlayers();
+
+                displayLeaderboard(scores, achievements, players);
+            } catch (error) {
+                console.error(error);
+            }
+
+            // Display the leaderboard data
+            function displayLeaderboard(scores, achievements, players) {
+                const leaderboardDiv = document.getElementById("leaderboard");
+                let html = "<h2>Leaderboard</h2><ul>";
+
+                for (let i = 0; i < players.length; i++) {
+                    html += `<li>${players[i]} - Score: ${scores[i]} - Achievement: ${achievements[i]}</li>`;
+                }
+
+                html += "</ul>";
+                leaderboardDiv.innerHTML = html;
+            }
+        });
+    </script>
+</body>
+
+</html>

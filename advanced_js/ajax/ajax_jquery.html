@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gamers Zone</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="gamerData"></div>
+
+    <script>
+        $(document).ready(function () {
+            // Function to fetch gamer data
+            function getGamerData() {
+                $.ajax({
+                    url: 'https://jsonplaceholder.typicode.com/users',
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function (users) {
+                        displayGamerData(users);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Request failed with status: " + xhr.status);
+                    }
+                });
+            }
+
+            // Function to display gamer data
+            function displayGamerData(users) {
+                var gamerDataDiv = $("#gamerData");
+                var html = "<h2>Gamer Data</h2><ul>";
+
+                for (var i = 0; i < users.length; i++) {
+                    html += "<li>Gamer: " + users[i].name + " | Email: " + users[i].email + "</li>";
+                }
+
+                html += "</ul>";
+                gamerDataDiv.html(html);
+            }
+
+            // Call the function to fetch and display gamer data
+            getGamerData();
+        });
+    </script>
+</body>
+
+</html>
