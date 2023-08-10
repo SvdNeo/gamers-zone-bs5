@@ -25,6 +25,7 @@ console.log(marketing_report)
 console.log(marketing_report.constructor); // Report()
 
 // If an object is created with an object literal(var newObj = {}), it inherits properties from Object.prototype
+// cart = new Object() or = {}
 let cart = { id: 1, items: [{ name: "T-Shirt", size: 'L', price: 2999 }, { name: "Pant", size: '32', price: 4999 }] }
 console.log(cart.constructor)
 console.log(cart.constructor.prototype)
@@ -41,7 +42,6 @@ console.log(employee_attendance_report.constructor.prototype)
 // JavaScript has a prototype - based inheritance mechanism.
 // Inheritance is a programming paradigm where objects(or Classes in some languages) can inherit properties and methods from other objects(or Classes)
 // all functions in JavaScript are objects
-
 
 
 
