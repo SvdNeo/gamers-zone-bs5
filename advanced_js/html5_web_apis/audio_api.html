@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Audio CMS</title>
+</head>
+
+<body>
+    <h1>Online Audio CMS</h1>
+
+    <div id="audio-list">
+        <!-- Audio items will be added here dynamically -->
+    </div>
+
+    <script>
+        // Define an array of online audio URLs
+        const audioUrls = [
+            'http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg',
+            'http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3'
+            // Add more URLs as needed
+        ];
+
+        // Get the audio-list div where we'll add audio items
+        const audioList = document.getElementById('audio-list');
+
+        // Loop through the audio URLs and create audio elements
+        audioUrls.forEach((audioUrl, index) => {
+            const audioElement = document.createElement('audio');
+            audioElement.controls = true; // Show the audio controls
+            audioElement.src = audioUrl;
+
+            const audioItem = document.createElement('div');
+            audioItem.innerHTML = `<p>Audio ${index + 1}</p>`;
+            audioItem.appendChild(audioElement);
+
+            audioList.appendChild(audioItem);
+        });
+    </script>
+</body>
+
+</html>

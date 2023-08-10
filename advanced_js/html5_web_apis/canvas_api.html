@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API Example</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Canvas API Example</h1>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+
+    <script>
+        // Get the canvas element
+        const canvas = document.getElementById('myCanvas');
+        const context = canvas.getContext('2d'); // Get 2D drawing context
+
+        // Draw a rectangle
+        context.fillStyle = 'blue'; // Fill color
+        context.fillRect(50, 50, 200, 100); // x, y, width, height
+
+        // Draw a circle
+        context.fillStyle = 'red';
+        context.beginPath();
+        context.arc(300, 150, 50, 0, Math.PI * 2); // x, y, radius, start angle, end angle
+        context.fill();
+    </script>
+</body>
+
+</html>
