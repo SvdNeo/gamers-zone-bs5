@@ -5,7 +5,7 @@ function playGame() {
 
 // playGame();
 // Variable
-let name = "Giteka";
+let name = "The User";
 // console.log(name)
 
 // Function Expression - Anonymous
